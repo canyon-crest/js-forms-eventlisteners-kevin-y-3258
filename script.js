@@ -65,7 +65,7 @@ for (let i = 0; i < sizes.length; i++) {
 //      Convert to a number with parseFloat().
 let toppings = document.getElementsByName('cb');
 let count = 0;
-for (i = 0; i < toppings.length; i++) {
+for (let i = 0; i < toppings.length; i++) {
     if (toppings[i].checked) {
         count++;
     }
@@ -121,8 +121,8 @@ document.getElementById('myPara').innerHTML = name + ', your total is $' + total
 //         c) Uncheck ALL topping checkboxes (loop through them)
 //         d) Set the service dropdown value to "dinein"
 //         e) Set the output paragraph innerHTML to ""
-document.getElementById(clearBtn).addEventListener('click', function() {
-    document.getElementById(myInput).value = '';
+document.getElementById('clearBtn').addEventListener('click', function() {
+    document.getElementById('myInput').value = '';
     document.getElementById('r3').checked = true;
     let toppings = document.getElementsByName('cb');
     for (let i = 0; i < toppings.length; i++) {
